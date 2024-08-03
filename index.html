@@ -158,6 +158,50 @@ button{
     border: none;
     outline: none;
     border-radius: 15px;
+    button{
+    background: rgba(255,255,255,0.06);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,.37);
+    border-radius: 16px;
+    border-left: 1px solid rgba(255,255,255,.3);
+    border-top: 1px solid rgba(255,255,255,.3);
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    border-right: 1px solid rgba(255,255,255,.3);
+    justify-content: center;
+    text-shadow:rgba(255,255,255,0.06); 
+    text-size-adjust: 25px;
+}
+   button {
+  padding: 10px 20px;
+  font-size: 19px;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+button::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+button:hover::before {
+  transform: translateY(0);
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}        
+
 }
 </style>
 </head>
